@@ -1,0 +1,5 @@
+package com.Moviedb.business.movie;
+
+public class Movie {
+
+}

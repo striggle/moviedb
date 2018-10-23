@@ -1,0 +1,81 @@
+package com.Moviedb.business.actor;
+
+import java.time.LocalDateTime;
+
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
+@Entity
+public class Actor {
+
+	@Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+	private int ID;
+	private String FirstName;
+	private String LastName;
+	private String Gender;
+	private LocalDateTime BirthDate;
+	
+	public Actor(int id, String firstName, String lastName, String gender, LocalDateTime birthDate) {
+		super();
+		this.ID = id;
+		FirstName = firstName;
+		LastName = lastName;
+		Gender = gender;
+		BirthDate = birthDate;
+	}
+
+	public Actor(String firstName, String lastName, String gender, LocalDateTime birthDate) {
+		super();
+		FirstName = firstName;
+		LastName = lastName;
+		Gender = gender;
+		BirthDate = birthDate;
+	}
+
+	public Actor() {
+		super();
+	}
+
+	public int getId() {
+		return ID;
+	}
+
+	public void setId(int id) {
+		this.ID = id;
+	}
+
+	public String getFirstName() {
+		return FirstName;
+	}
+
+	public void setFirstName(String firstName) {
+		FirstName = firstName;
+	}
+
+	public String getLastName() {
+		return LastName;
+	}
+
+	public void setLastName(String lastName) {
+		LastName = lastName;
+	}
+
+	public String getGender() {
+		return Gender;
+	}
+
+	public void setGender(String gender) {
+		Gender = gender;
+	}
+
+	public LocalDateTime getBirthDate() {
+		return BirthDate;
+	}
+
+	public void setBirthDate(LocalDateTime birthDate) {
+		BirthDate = birthDate;
+	}
+}

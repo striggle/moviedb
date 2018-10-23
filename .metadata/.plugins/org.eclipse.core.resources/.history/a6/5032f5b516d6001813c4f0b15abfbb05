@@ -1,0 +1,5 @@
+package com.Moviedb.business.actor;
+
+public class Actor {
+
+}
